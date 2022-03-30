@@ -1,0 +1,26 @@
+{
+  "name": "activeui-hands-on",
+  "version": "1.0.0",
+  "description": "An app to visualize activeui plugins",
+  "author": "Barka Mohamed Ali <mohamedali.barka@student-cs.fr>",
+  "homepage": "https://github.com/mohamedalibarka/activiam-plugins-repo#readme",
+  "license": "ISC",
+  "main": "lib/activeui-hands-on.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedalibarka/activiam-plugins-repo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mohamedalibarka/activiam-plugins-repo/issues"
+  }
+}
