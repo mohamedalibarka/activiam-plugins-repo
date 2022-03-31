@@ -39,5 +39,5 @@
   },
   "browserslist": [
     "extends @activeviam/browserslist-config-activeui"
-]
+  ]
 }
