@@ -18,9 +18,26 @@
     "url": "git+https://github.com/mohamedalibarka/activiam-plugins-repo.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "start": "activeui-scripts start",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "yarn build:clean && yarn build:esm && yarn build:cjs",
+    "build:clean": "rm -rf lib",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
   "bugs": {
     "url": "https://github.com/mohamedalibarka/activiam-plugins-repo/issues"
-  }
+  },
+  "dependencies": {
+    "@types/react-plotly.js": "^2.5.0",
+    "plugin-widget-sunburst": "^1.0.0"
+  },
+  "devDependencies": {
+    "@activeviam/activeui-scripts": "5.0.7",
+    "@activeviam/browserslist-config-activeui": "5.0.7",
+    "@activeviam/sandbox-clients": "5.0.7"
+  },
+  "browserslist": [
+    "extends @activeviam/browserslist-config-activeui"
+]
 }

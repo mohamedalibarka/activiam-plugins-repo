@@ -5,7 +5,9 @@
   "author": "Barka Mohamed Ali <mohamedali.barka@student-cs.fr>",
   "homepage": "https://github.com/mohamedalibarka/activiam-plugins-repo#readme",
   "license": "ISC",
-  "main": "lib/plugin-widget-sunburst.js",
+  "main": "lib/index.js",
+  "module": "lib/esm/modulePlugins.js",
+  "types": "lib/esm/modulePlugins.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,9 +20,17 @@
     "url": "git+https://github.com/mohamedalibarka/activiam-plugins-repo.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "yarn build:clean && yarn build:esm && yarn build:cjs",
+    "build:clean": "rm -rf lib",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
   "bugs": {
     "url": "https://github.com/mohamedalibarka/activiam-plugins-repo/issues"
+  },
+  "dependencies": {
+    "@types/react-plotly.js": "^2.5.0",
+    "react-plotly.js": "^2.5.1"
   }
 }
