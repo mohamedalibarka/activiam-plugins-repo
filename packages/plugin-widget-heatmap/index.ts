@@ -1,0 +1,1 @@
+export { pluginWidgetHeatmap } from "./pluginWidgetHeatmap";
